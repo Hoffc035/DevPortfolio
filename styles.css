@@ -1,6 +1,5 @@
 html {
-    background-color: #2b4162;
-    background-image: linear-gradient(295deg, #2b4162 0%, #12100e 34%);
+    background-color: #12100e;
     height: 100%;
     width: 100%;
     color: #D9D9D9;
@@ -11,6 +10,10 @@ html {
     padding: 0 20px;
     margin-left: 18%;
     margin-top: 50px;
+}
+
+body {
+    background-image: linear-gradient(190deg, #2b4162 0%, #12100e 21%);
 }
 
 header {
@@ -27,12 +30,12 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    font-size: 32px;
 }
 
 nav ul li {
     display: inline-block; 
     margin-bottom: 30px; 
-    text-decoration: underline;
 }
 
 nav ul li a {
@@ -44,11 +47,32 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle hover effect */
+    /* background-color: rgba(255, 255, 255, 0.1);  Add a subtle hover effect */
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 #about {
     margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-pic {
+    border-radius: 50%;
+    float:right;
+    margin-right: 12%;
+}
+
+.about-me {
+    font-size: 18px;
+    width: 33%;
+ }
+
+ .about-content {
+    flex-grow: 1;
 }
 
 .skill {
@@ -57,32 +81,16 @@ nav ul li a:hover {
     vertical-align: middle; 
 }
 
-
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
-.about-me {
-    width: 33%;
-    font-size: 18px;
-}
-
 #title-name {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 20px; /* Adjust as needed */
-}
-
-/* Interactive item style */
-#contactButton {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    display: inline-flex;
+    float: left;
+    align-self: center;
 }
 
 .skill-text {
@@ -113,6 +121,27 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
+#not-done {
+    display: none;
+}
+
+/* Interactive item style */
+#contactButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px 0000FF, 0 0 40px 0000FF, 0 0 50px 0000FF, 0 0 60px 0000FF, 0 0 70px 0000FF;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #2b4162, 0 0 40px #2b4162, 0 0 50px #2b4162, 0 0 60px #2b4162, 0 0 70px #2b4162, 0 0 80px #2b4162;
+    }
+  }
 
 /* Media styling */
 * {
